@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÉLORA | Perfumería selecta</title>
+<meta name="description" content="Cuatro fragancias seleccionadas para cada personalidad. Elige tu perfume y haz tu pedido de forma sencilla por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado" id="encabezado">
+  <div class="contenedor encabezado__fila">
+    <a class="logo" href="#inicio" aria-label="ÉLORA, ir al inicio">
+      <span class="logo__nombre">ÉLORA</span>
+      <span class="logo__sub">PERFUMERÍA SELECTA</span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#coleccion">Colección</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="acciones">
+      <button class="carrito-btn" id="btnCarrito" type="button" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8h14l-1 12H6L5 8Z"/>
+          <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+        </svg>
+        <span class="contador" id="contador" hidden>0</span>
+      </button>
+      <button class="hamburguesa" id="btnMenu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="contenedor hero__grid">
+      <div class="hero__texto">
+        <p class="sobretitulo">El arte de la perfumería</p>
+        <h1>
+          <span>Una esencia.</span>
+          <span>Una historia.</span>
+          <em>Tú.</em>
+        </h1>
+        <p class="hero__lead">Descubre fragancias que expresan tu personalidad y convierten cada momento en un recuerdo inolvidable.</p>
+        <div class="botones">
+          <a class="boton boton--oro" href="#coleccion">Descubrir colección</a>
+          <a class="boton boton--linea" href="#nosotros">Conoce nuestra esencia</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="arco"></div>
+       
+<img src="img/bare.svg" alt="Frasco ámbar de Victoria's Secret Bare">
+      </div>
+    </div>
+  </section>
+
+  <section class="beneficios" aria-label="Beneficios">
+    <div class="contenedor">
+      <ul>
+        <li><b>01</b><span>Atención personalizada</span></li>
+        <li><b>02</b><span>Compra sencilla por WhatsApp</span></li>
+        <li><b>03</b><span>Presentación elegante</span></li>
+        <li><b>04</b><span>Asesoría para elegir tu fragancia</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="coleccion">
+    <div class="contenedor">
+      <div class="seccion__cabecera" data-reveal>
+        <p class="sobretitulo">Colección</p>
+        <h2>Nuestra colección</h2>
+        <p>Cuatro fragancias, cuatro formas de expresar tu esencia</p>
+      </div>
+
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar fragancias">
+        <button class="filtro activo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="filtro" type="button" data-filtro="masculino" aria-pressed="false">Masculinos</button>
+        <button class="filtro" type="button" data-filtro="femenino" aria-pressed="false">Femeninos</button>
+      </div>
+
+      <div class="grilla" id="grilla"></div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--crema esencia" id="nosotros">
+    <div class="contenedor esencia__grid">
+      <div class="esencia__visual" data-reveal>
+        <div class="arco"></div>
+       
+<img src="img/bare.svg" alt="Frasco ámbar de Victoria's Secret Bare">
+      </div>
+
+      <div class="esencia__texto" data-reveal>
+        <p class="sobretitulo">Nosotros</p>
+        <h2>Más que un perfume, una forma de expresión</h2>
+        <p>Creemos que cada fragancia tiene el poder de evocar emociones, despertar recuerdos y expresar quiénes somos. En ÉLORA seleccionamos aromas para acompañarte en cada etapa, cada encuentro y cada momento especial.</p>
+        <ol class="principios">
+          <li><b>I</b><span>Elegancia en cada detalle</span></li>
+          <li><b>II</b><span>Fragancias para cada personalidad</span></li>
+          <li><b>III</b><span>Una experiencia de compra sencilla</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--beige" id="contacto">
+    <div class="contenedor contacto__grid">
+      <div class="contacto__texto" data-reveal>
+        <p class="sobretitulo">Contacto</p>
+        <h2>Encuentra tu próxima esencia</h2>
+        <p>¿Dudas entre dos fragancias? Escríbenos y te ayudamos a elegir la que mejor va contigo.</p>
+        <button class="boton boton--oro" id="btnWhatsapp" type="button">Escribir por WhatsApp</button>
+        
+      </div>
+
+      <form class="formulario" id="formulario" novalidate data-reveal>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <p class="campo__error" id="errorNombre"></p>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+          <p class="campo__error" id="errorCorreo"></p>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          <p class="campo__error" id="errorMensaje"></p>
+        </div>
+        <button class="boton boton--oro" type="submit">Enviar consulta</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__grid">
+    <div>
+      <p class="pie__logo">ÉLORA</p>
+      <p class="pie__frase">La esencia de ser tú</p>
+    </div>
+    <nav aria-label="Enlaces rápidos">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#coleccion">Colección</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <ul>
+      <li><a href="#" data-red="instagram">Instagram</a></li>
+      <li><a href="#" data-red="facebook">Facebook</a></li>
+      <li><a href="#" data-red="tiktok">TikTok</a></li>
+      <li><a href="#" data-red="privacidad">Política de privacidad</a></li>
+    </ul>
+  </div>
+  <div class="contenedor pie__derechos">
+    <p>&copy; <span id="anio"></span> ÉLORA Perfumería Selecta. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<dialog class="modal" id="detalle" aria-labelledby="detalleTitulo">
+  <button class="cerrar" type="button" data-cerrar aria-label="Cerrar ventana">&times;</button>
+  <div class="modal__grid">
+    <div class="modal__foto">
+      <img id="detalleImagen" src="img/respaldo.svg" alt="">
+    </div>
+    <div class="modal__info">
+      <p class="tarjeta__marca" id="detalleMarca"></p>
+      <h2 id="detalleTitulo"></h2>
+      <p class="modal__categoria" id="detalleCategoria"></p>
+      <p class="modal__descripcion" id="detalleDescripcion"></p>
+      <p class="modal__precio" id="detallePrecio"></p>
+      <div class="cantidad" aria-label="Cantidad">
+        <button type="button" id="detalleMenos" aria-label="Disminuir cantidad">&minus;</button>
+        <output id="detalleCantidad">1</output>
+        <button type="button" id="detalleMas" aria-label="Aumentar cantidad">+</button>
+      </div>
+      <button class="boton boton--oro" type="button" id="detalleAgregar">Agregar al carrito</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="panel" id="panelCarrito" aria-labelledby="carritoTitulo">
+  <div class="panel__interno">
+    <div class="panel__cabecera">
+      <h2 id="carritoTitulo">Tu carrito</h2>
+      <button class="cerrar cerrar--panel" type="button" data-cerrar aria-label="Cerrar carrito">&times;</button>
+    </div>
+
+    <ul class="panel__lista" id="listaCarrito"></ul>
+    <p class="panel__vacio" id="carritoVacio">Tu carrito está vacío. Elige una fragancia de la colección para comenzar.</p>
+
+    <div class="panel__pie">
+      <div class="panel__total">
+        <span>Total</span>
+        <strong id="carritoTotal">$0.00</strong>
+      </div>
+      <button class="boton boton--oro" type="button" id="btnFinalizar">Finalizar pedido por WhatsApp</button>
+      <button class="boton boton--linea" type="button" data-cerrar>Seguir comprando</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="aviso" id="aviso" popover="manual" role="status"></div>
+
+</body>
+</html>
